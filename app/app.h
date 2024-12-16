@@ -4,6 +4,8 @@
 
 namespace vsite::oop::v5 
 {
+	// comment for workflow
+
 	double operator "" _inch(unsigned long long x);
 	double operator "" _eur(unsigned long long x);
 
