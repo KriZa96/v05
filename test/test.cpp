@@ -43,7 +43,7 @@ namespace all_tests
 			product p(1500_eur);
 			Assert::AreEqual(11'301.75, p.price());
 		}
-
+		
 		TEST_METHOD(car_one)
 		{
 			car peugot(2022, 100'000_eur, 17_inch);
