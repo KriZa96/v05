@@ -12,7 +12,6 @@ namespace vsite::oop::v5
 	class tire {
 	public:
 		tire(double diameter);
-		~tire() = default;
 		double diameter();
 		
 	private:
@@ -22,7 +21,6 @@ namespace vsite::oop::v5
 	class vehicle {
 	public:
 		vehicle(int year);
-		~vehicle() = default;
 		int year();
 	private:
 		int year_;
@@ -31,7 +29,6 @@ namespace vsite::oop::v5
 	class product {
 	public:
 		product(double price);
-		~product() = default;
 		double price();
 	private:
 		double price_;
@@ -40,12 +37,9 @@ namespace vsite::oop::v5
 	class car: public vehicle, public product {
 	public:
 		car(double year, double price, double wheel_diameter);
-		~car() {
-			delete _tire;
-		}
 		double tire_diameter();
 	private:
-		tire* _tire;
+		tire tire_;
 	};
 
 

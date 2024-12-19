@@ -11,10 +11,13 @@ namespace vsite::oop::v5
 	};
 
 	tire::tire(double diameter): diameter_(diameter) {}
+
 	vehicle::vehicle(int year) : year_(year) {}
+
 	product::product(double price) : price_(price) {}
+
 	car::car(double year, double price, double wheel_diameter)
-		: _tire(new tire(wheel_diameter)), vehicle(year), product(price) {}
+		: tire_(tire(wheel_diameter)), vehicle(year), product(price) {}
 
 	double tire::diameter() {
 		return diameter_;
@@ -29,7 +32,7 @@ namespace vsite::oop::v5
 	}
 
 	double car::tire_diameter() {
-		return _tire->diameter();
+		return tire_.diameter();
 	}
 
 }
