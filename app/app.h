@@ -39,7 +39,7 @@ namespace vsite::oop::v5
 		car(double year, double price, double wheel_diameter);
 		double tire_diameter();
 	private:
-		tire tire_;
+		tire tire;
 	};
 
 
